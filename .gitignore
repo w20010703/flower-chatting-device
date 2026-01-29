@@ -1,0 +1,3 @@
+# Ignore AWS credentials / keys
+AWS_KEY/
+

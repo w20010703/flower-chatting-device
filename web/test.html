@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+
+  <title>Auto Scrolling Word Box</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #000;
+      font-family: sans-serif;
+      color: white;
+      font-weight: 600;
+
+      font-family: "Jersey 25", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cover {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, .7);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .coverbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 40px;
+      gap: 10px;
+      width: 92vw;
+      padding: 2vw;
+    }
+
+    .word-box {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+
+    .words {
+      height: 20vh;
+      position: absolute;
+      display: flex;
+    }
+
+    .words0{
+/*      background: blue;*/
+      margin-top: 0vh;
+      animation: scrollWords 18s linear infinite;
+    }
+
+    .words1{
+/*      background: red;*/
+      margin-top: 25vh;
+      animation: scrollWords 12s linear infinite;
+    }
+
+    .words2{
+/*      background: blue;*/
+      margin-top: 50vh;
+      animation: scrollWords 20s linear infinite;
+    }
+
+    .words3{
+/*      background: blue;*/
+      margin-top: 75vh;
+      animation: scrollWords 14s linear infinite;
+    }
+
+    .holder {
+      width: 100vh;
+      margin-right: 10px;
+      margin-left: 10px;
+      animation: scrollWords 18s linear infinite;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .holder1{
+      width: 20vh;
+    }
+
+    .holder2{
+      margin: 0 5vh;
+      width: 70vh;
+    }
+
+    .word {
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .word img {
+      height: 100%;
+    }
+
+    .chatting {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 20px;
+      
+    }
+
+    .chatting div:nth-child(odd){
+      align-self: flex-start;
+    }
+
+    .chatting div:nth-child(even){
+      align-self: flex-end;
+    }
+
+    .largefont {
+      font-size: 170px;
+    }
+
+    .emoji {
+      font-size: 160px;
+    }
+
+    .paragraph {
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 5px;
+    }
+
+    .bigfont {
+      font-size: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .bigfont div:nth-child(odd){
+      align-self: flex-start;
+      margin: 0 20px;
+    }
+
+    .bigfont div:nth-child(even){
+      align-self: flex-end;
+      margin: 0 20px;
+    }
+
+    @keyframes scrollWords {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="coverbox">
+      <div>Hello I am going to NYC this coming fall semester and am looking </div>
+      <div>Hello I am going to NYC</div>
+      <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or </div>
+    </div>
+</div>
+
+<div class="word-box">
+  <div class="words words0">
+    
+    <div class="holder">
+      <div class="word holder1"><img src="img/r.png"></div>
+      <div class="word chatting holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking </div>
+        <div>Hello I am going to NYC</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or </div>
+      </div>
+    </div>
+    
+    <div class="holder">
+      <div class="word largefont holder1">??</div>
+      <div class="word paragraph holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+      </div>
+    </div>
+
+    <div class="holder">
+      <div class="word holder1"><img src="img/r.png"></div>
+      <div class="word chatting holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking </div>
+        <div>Hello I am going to NYC</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or </div>
+      </div>
+    </div>
+    
+    <div class="holder">
+      <div class="word largefont holder1">??</div>
+      <div class="word paragraph holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="words words1">
+    <div class="holder">
+      <div class="word holder1"><img src="img/r.png"></div>
+      <div class="word chatting holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking </div>
+        <div>Hello I am going to NYC</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or </div>
+      </div>
+    </div>
+    
+    <div class="holder">
+      <div class="word largefont holder1">??</div>
+      <div class="word paragraph holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+      </div>
+    </div>
+
+    <div class="holder">
+      <div class="word holder1"><img src="img/r.png"></div>
+      <div class="word chatting holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking </div>
+        <div>Hello I am going to NYC</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or </div>
+      </div>
+    </div>
+    
+    <div class="holder">
+      <div class="word largefont holder1">??</div>
+      <div class="word paragraph holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="words words2">
+    <div class="holder">
+      <div class="word holder1"><img src="img/r.png"></div>
+      <div class="word bigfont holder2">
+        <div>Hi... </div>
+        <div>Long time no see...</div>
+      </div>
+    </div>
+    
+    <div class="holder">
+      <div class="word emoji holder1">&#128517;</div>
+      <div class="word paragraph holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+      </div>
+    </div>
+
+    <div class="holder">
+      <div class="word holder1"><img src="img/r.png"></div>
+      <div class="word bigfont holder2">
+        <div>Hi... </div>
+        <div>Long time no see...</div>
+      </div>
+    </div>
+    
+    <div class="holder">
+      <div class="word emoji holder1">&#128517;</div>
+      <div class="word paragraph holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="words words3">
+    <div class="holder">
+      <div class="word holder1"><img src="img/r.png"></div>
+      <div class="word bigfont holder2">
+        <div>Hi... </div>
+        <div>Long time no see...</div>
+      </div>
+    </div>
+    
+    <div class="holder">
+      <div class="word emoji holder1">&#128517;</div>
+      <div class="word paragraph holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+      </div>
+    </div>
+
+    <div class="holder">
+      <div class="word holder1"><img src="img/r.png"></div>
+      <div class="word bigfont holder2">
+        <div>Hi... </div>
+        <div>Long time no see...</div>
+      </div>
+    </div>
+    
+    <div class="holder">
+      <div class="word emoji holder1">&#128517;</div>
+      <div class="word paragraph holder2">
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+        <div>Hello I am going to NYC this coming fall semester and am looking for a sublease or people that need a roommate from early august through December</div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
