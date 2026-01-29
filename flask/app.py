@@ -41,7 +41,7 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-DISCORD_TOKEN = 'REDACTED_DISCORD_TOKEN'
+DISCORD_TOKEN = ''
 CHANNEL_ID_Julia = 1275510960047784080
 CHANNEL_ID_Chris = 748914683687469169
 
