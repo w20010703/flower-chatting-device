@@ -76,7 +76,8 @@ async def on_message(message):
         await message.channel.send(f'Hi {message.author.name}!')
 
 # Run the bot with your token
-client.run('REDACTED_DISCORD_TOKEN')
+import os
+client.run(os.environ["DISCORD_TOKEN"])
 
 
 

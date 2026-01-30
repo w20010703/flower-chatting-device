@@ -19,7 +19,6 @@
 
 #     await client.close()
 
-# client.run('REDACTED_DISCORD_TOKEN')
 
 import discord
 import asyncio
@@ -44,4 +43,5 @@ async def on_ready():
     
     await client.close()
 
-client.run('REDACTED_DISCORD_TOKEN')
+import os
+client.run(os.environ["DISCORD_TOKEN"])
